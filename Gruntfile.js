@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
+  //s Project configuration.
   grunt.initConfig({
     uglify: {
       options: {
