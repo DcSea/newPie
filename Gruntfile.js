@@ -46,14 +46,33 @@ module.exports = function(grunt) {
         }
       }
     },
+    compass: {
+      dist: {
+        options: {
+          sassDir: 'public/sass',
+          cssDir: 'public/css',
+          environment: 'production',
+          banner: '/*!<%= grunt.template.today("yyyy-mm-dd") %> */\n',
+          specify:['public/sass/compass.scss']
+        }
+      },
+      dev: {
+        options: {
+          sassDir: 'public/sass',
+          cssDir: 'public/css',
+          banner: '/*!<%= grunt.template.today("yyyy-mm-dd") %> */\n',
+          specify:['public/sass/compass.scss']
+        }
+      }
+    },
     watch:{
       js:{
         files:['public/js/dev.js'],
         tasks:['jshint','uglify']
       },
       css:{
-        files:['public/css/dev.css'],
-        tasks:['cssmin']
+        files:['public/sass/compass.scss'],
+        tasks:['compass:dev']
       },
       html:{
         files:['views/index.ejs'],
@@ -68,8 +87,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   // 默认被执行的任务列表。
-  grunt.registerTask('default', ['uglify','cssmin','htmlmin','watch']);
-
+  grunt.registerTask('default', ['uglify','compass:dev','htmlmin','watch']);
+  grunt.registerTask('dist', ['uglify','compass:dist','htmlmin']);
 };
