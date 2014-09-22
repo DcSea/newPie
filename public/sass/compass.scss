@@ -1,0 +1,10 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "base.scss";
+$baseLineHeight: 1.5 !default;
+.rounded{
+	top: 50px + 120px;
+	@include border-radius(51px);
+	line-height: $baseLineHeight;
+	@include opacity(0.5);
+}

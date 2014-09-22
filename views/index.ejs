@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PieMoment</title>
+    <meta charset='UTF-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+    <meta name='format-detection' content='telephone=no'>
+    <link rel='stylesheet' href='css/font-awesome/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='css/dev.css'>
+  </head>
+  <body>
+    <div id='pieBody'>
+      <div id='pieLeftMenu'>
+        <div class='scrollArea'>
+          <div class='container'>
+            <table>
+              <tbody>
+                <tr>
+                  <td width='60%'>
+                    <div id='menuUserHomeNav' class='menuNavOuter'>
+                      <div class='menuItemIcon'>
+                        <img id='menuAvatar'/>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span id='menuUserName' class='menuItemName'>未命名</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td width='60%'>
+                    <div id='menuPieMatchNav' class='menuNavOuter'>
+                      <div class='menuItemIcon'>
+                        <i class='icon-heart'></i>
+                      </div>
+                      <div class='unreadMessageNum' id='leftMenuUnread'></div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class='menuItemName'>配对</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td width='60%'>
+                    <div id='menuPieTestNav' class='menuNavOuter'>
+                      <div class='menuItemIcon'>
+                        <i class='icon-cogs'></i>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class='menuItemName'>测试</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td width='60%'>
+                    <div id='menuPieSettingNav' class='menuNavOuter'>
+                      <div class='menuItemIcon'>
+                        <i class='icon-wrench'></i>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class='menuItemName'>设置</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id='pieRightMenu'>
+        <div class='scrollArea'>
+          <div id='pieTips' class='container'>
+            <div id='tipProgress'></div>
+            <div id='tipContent'></div>
+          </div>
+        </div>
+      </div>
+      <div id='pieShadow'></div>
+      <div id='pieLoading'>
+        <ul class="bokeh"><li></li><li></li><li></li><li></li></ul>
+        <div id='loadingInfo'></div>
+      </div>
+      <div id='messageControlBox'>
+        <div id='resendMessage'>重发</div>
+        <div id='deleteMessage'>删除</div>
+      </div>
+      <div id='pieRemind'>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id='pieConfirm'>
+        <div id='confirmContent'></div>
+        <div id='confirmCommandBox'>
+          <div id='confirmYes'>确认</div>
+          <div id='confirmNo'>取消</div>
+        </div>
+      </div>
+      <div id='pie'>
+        <div id='pieHeader'>
+          <table>
+            <tbody>
+              <tr>
+                <td width='20%'>
+                  <div id='birdBack'>
+                    <img src='img/bird.png'/>
+                  </div>
+                  <div id='arrowBack'>
+                    <i class='icon-arrow-left'></i>
+                  </div>
+                </td>
+                <td width='60%'><span id='pageTitle'></span></td>
+                <td width='20%'>
+                  <div id='mateHomePageMenu' class='pageMenu'>举报</div>
+                  <div id='userHomePageMenu' class='pageMenu'>刷新</div>
+                  <div id='pieMatchIndexPageMenu' class='pageMenu'>体验一下</div>
+                  <div id='pieActivatePageMenu' class='pageMenu'>重新发送</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id='pieSettingPage' class='piePage'>
+          <div class='scrollArea paddingArea'>
+            <div class='pieSettingNav' id='aboutUsNav'>
+              <i class='icon-book'></i>
+              <span>pieFamily - 关于</span>
+            </div>
+            <div class='pieSettingNav' id='helpNav'>
+              <i class='icon-leaf'></i>
+              <span>pieHelp - 帮助</span>
+            </div>
+            <div class='pieSettingNav' id='feedBackNav'>
+              <i class='icon-exchange'></i>
+              <span>pieFeedback - 反馈</span>
+            </div>
+            <div class='pieSettingNav' id='logoutNav'>
+              <i class='icon-power-off'></i>
+              <span>pieLogout - 退出</span>
+            </div>
+          </div>
+        </div>
+        <div id='pieReportPage' class='piePage'>
+          <div class='paddingArea'>
+            <div id='reportInput'>
+              <textarea></textarea>
+            </div>
+            <div id='reportSubmit'>提交</div>
+          </div>
+        </div>
+        <div id='askQuestionPage' class='piePage'>
+        </div>
+        <div id='pieGuidePage' class='piePage'>
+          <div id='pieGuideSwipe' class='swipe'>
+            <div class='swipe-wrap'></div>
+          </div>
+          <div class='swipeFooter'></div>
+        </div>
+        <div id='pieHelpPage' class='piePage'>
+          <div class='scrollArea'>
+            <div class='container'>
+              <h2>PieMoment规则:</h2>
+              <h4>1.每天中午12点为你1对1匹配1位异性</h4>
+              <h4>2.双方只有1天时间去决定选择like或者pass对方</h4>
+              <h4>3.24小时内双方都选择like则配对成功,否则配对失败</h4>
+              <h4>4.配对成功之后你们才能联系到对方</h4>
+              <h4>6.长期不登陆或不做选择的账户将进入锁定状态,需要手动激活</h4>
+              <h4>7.如果长期没有匹配,请检查自己的匹配期望是不是太高了</h4>
+            </div>
+          </div>
+        </div>
+        <div id="pieLoginPage" class='piePage'>
+          <div class='scrollArea'>
+            <div id='pieLogo'>
+              <img src='img/pieLogo.png' width='120' height='120'/>
+            </div>
+            <div class='formArea'>
+              <div class="formItem formInputItem">
+                <input type="text" class='itemInput' placeholder="手机号/邮箱/用户名" id="pieLoginAccountInput"/>
+              </div>
+              <div class="formItem formInputItem">
+                <input type="password" class='itemInput' placeholder='密码' id="pieLoginPasswordInput"/>
+              </div>
+              <div class="formItem formInputItem">
+                <input type='submit' class='itemSubmit' value='登录' id='pieLoginSubmit'/>
+              </div>
+              <div class="formItem formInfoItem">
+                <span id='findBackPassword'>忘记密码？</span>
+                <span id='doRegNow'>立即注册</span>
+              </div>
+            </div>
+            <div id='socialLoginNav'>
+              <img id='renrenLogo' src='img/renren.png'/>
+              <img id='weiboLogo' src='img/weibo.png'/>
+            </div>
+          </div>
+        </div>
+        <div id='pieFamilyPage' class='piePage'></div>
+        <div id='renrenLoginPage' class='piePage'></div>
+        <div id='weiboLoginPage' class='piePage'></div>
+        <div id='pieRegPage' class='piePage'>
+          <div class='scrollArea paddingArea'>
+            <div class='formArea'>
+              <table id='regChooseSex'>
+                <tbody>
+                  <tr>
+                    <td width='50%' id='chooseMale'>
+                      <i class='icon-male'></i>
+                      <span>男生</span>
+                    </td>
+                    <td width='50%' id='chooseFemale'>
+                      <i class='icon-female'></i>
+                      <span>女生</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class='formItem formInputItem'>
+                <input type='text' class='itemInput' placeholder='手机号' id='pieRegMobileInput'/>
+              </div>
+              <div class='formItem formInputItem'>
+                <input type='text' class='itemInput' placeholder='邮箱' id='pieRegEmailInput'/>
+              </div>
+              <div class='formItem formInputItem'>
+                <input type='password' class='itemInput' placeholder='密码' id='pieRegPasswordInput'/>
+              </div>
+            </div>
+            <div class='formItem formInputItem'>
+              <input type='submit' class='itemSubmit' value='确定' id='pieRegSubmit'/>
+            </div>
+          </div>
+        </div>
+        <div id='pieActivatePage' class='piePage'>
+          <div class='scrollArea paddingArea'>
+            <div class='formArea'>
+              <div class='formTitle'>
+                请输入您收到的激活码
+              </div>
+              <div class='formItem formInputItem'>
+                <input type='text' class='itemInput' placeholder='激活码' id='pieActivateInput'/>
+              </div>
+            </div>
+            <div class='formItem formInputItem'>
+              <input type='submit' class='itemSubmit' value='确定' id='pieActivateSubmit'/>
+            </div>
+          </div>
+        </div>
+        <div id='pieFindBackPasswordPage' class='piePage'>
+          <div class='scrollArea paddingArea'>
+            <div id='resetGetSmsArea'>
+              <div class='formArea'>
+                <div class="formTitle">
+                  请输入您的手机号申请重置密码
+                </div>
+                <div class="formItem formInputItem">
+                  <input type="text" class="itemInput" placeholder="手机号" id="findBackPasswordMobileInput"/>
+                </div>
+              </div>
+              <div class="formItem formInputItem">
+                <input type="submit" class="itemSubmit" value="发送短信" id='resetGetSmsSubmit'>
+              </div>
+            </div>
+            <div id='resetInputSmsArea'>
+              <div class='formArea'>
+                <div class="formTitle">
+                  请输入您收到的验证码
+                </div>
+                <div class="formItem formInputItem">
+                  <input type="text" class="itemInput" placeholder="验证码" id="findBackPasswordSmsInput">
+                </div>
+                <div class="formItem formInputItem">
+                  <input type="password" class="itemInput" placeholder="新密码" id="findBackPasswordNewPasswordInput">
+                </div>
+              </div>
+              <div class="formItem formInputItem">
+                <input type="submit" class="itemSubmit" value="重置密码" id='resetInputSmsSubmit'>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='userHomePage' class='piePage'>
+          <div class='scrollArea'>
+            <div id='userHomeGround'>
+              <div id='userHomeHead'><img id='userHomeAvatar'/></div>
+              <div id='userHomeNavBox'>
+                <span id='userPersonalInfoNav'>个人信息</span>
+                <span id='userMatchInfoNav'>匹配信息</span>
+                <span id='userQAInfoNav'>互动问答</span>
+              </div>
+            </div>
+            <div id='userPersonalInfoArea'>
+              <div id='userPhotoBlock' class='userInfoBlock'>
+                <div id='uploadPhotoButton'>
+                  <i class='icon-camera-retro'></i>
+                  <select id='uploadPhotoSelect' onchange='pie.uploadPhotoSelect(this)'>
+                    <option value=0>拍照上传</option><option value=1>选择相册</option>
+                  </select>
+                  <form id='uploadPhotoForm'>
+                    <input type='file' id='form_file' name='file' onchange='pie.page.userHomePage.uploadPhoto(this.files)'/>
+                    <input type='text' id='access_token' name='token'/>
+                  </form>
+                </div>
+                <div id='userHomePhotoArea'></div>
+              </div>
+              <div id='userPresentationBlock' class='userInfoBlock'>
+                <div class='infoBlockTitle'>自我介绍</div>
+                <div class='container'>
+                  <div id='userInfoPresentation' class='userInfoItem noBorderTop'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='90%'>
+                            <div class='userInfoItemContent'>这个家伙什么也没有留下</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div id='userBasicInfoBlock' class='userInfoBlock'>
+                <div class='infoBlockTitle'>基本资料</div>
+                <div class='container'>
+                  <div id='userInfoSex' class='noBorderTop'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>性别</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'></div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-male'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoMobile' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>手机</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent' format="telephone=no">未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoRealname' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>姓名</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoNickname' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>昵称</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoHeight' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>身高</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoWeight' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>体重</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoBirthday' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>生日</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoCurrentLocation' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>住址</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoBirthPlace' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>籍贯</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoSchool' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>学校</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userInfoDegree' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>学历</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>           
+                  <div id='userInfoOccupation' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>职业</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='userMatchInfoArea'>
+              <div id='userExpectationBlock' class='userInfoBlock'>
+                <div class='infoBlockTitle'>配对期望</div>
+                <div class='container'>
+                  <div id='userExpectationHeight' class='userInfoItem noBorderTop'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>身高要求</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userExpectationAge' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>年龄要求</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userExpectationDegree' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>学历要求</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userExpectationIdealLocation' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>理想城市</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='userExpectationLocationDistance' class='userInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='userInfoItemName'>距离要求</div>
+                          </td>
+                          <td width='65%'>
+                            <div class='userInfoItemContent'>未填写</div>
+                          </td>
+                          <td>
+                            <div class='userInfoItemEdit'>
+                              <i class='icon-chevron-right'></i>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='userQAInfoArea'>
+              <div id='questionContent' class='userInfoBlock'>
+                <div class='infoBlockTitle'>互动问答</div>
+                <div class='container'>
+                  <div class='questionTitle'></div>
+                  <div class='questionChoices'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='userInputPage'>
+          <div id='inputHeader'>
+            <table>
+              <tbody>
+                <tr>
+                  <td width='20%' id='inputCancel'>
+                    <span>取消</span>
+                  </td>
+                  <td width='60%' id='inputTitle'></td>
+                  <td width='20%' id='inputSubmit'>
+                    <span>确认</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class='paddingArea'>
+            <div id='userInfoMobileArea' class='inputArea'>
+              <input type="text" class="itemInput" placeholder="手机号" id="bindMobileInput"/>
+              <input type="text" class="itemInput" placeholder="验证码" id="bindMobileSmsInput"/>
+            </div>
+            <div id='userInfoPresentationArea' class='inputArea'>
+              <textarea id='userInfoPresentationInput' class='infoInput'></textarea>
+            </div>
+            <div id='userInfoRealnameArea' class='inputArea'>
+              <input type="text" class='infoInput' id='userInfoRealnameInput'/>
+            </div>
+            <div id='userInfoNicknameArea' class='inputArea'>
+              <input type="text" class='infoInput' id="userInfoNicknameInput"/>
+            </div>
+            <div id='userInfoHeightArea' class='inputArea oneSelect'>
+              <div id='userInfoHeightInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userInfoWeightArea' class='inputArea oneSelect'>
+              <div id='userInfoWeightInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userInfoBirthdayArea' class='inputArea threeSelect'>
+              <div id='userInfoBirthdayYearInput' class='selectBox'>
+                <ul></ul>
+              </div>
+              <div id='userInfoBirthdayMonthInput' class='selectBox'>
+                <ul></ul>
+              </div>
+              <div id='userInfoBirthdayDayInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userInfoCurrentLocationArea' class='inputArea twoSelect'>
+              <div id='userInfoCurrentLocationProvinceInput' class='selectBox'>
+                <ul></ul>
+              </div>
+              <div id='userInfoCurrentLocationCityInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userInfoBirthPlaceArea' class='inputArea twoSelect'>
+              <div id='userInfoBirthPlaceProvinceInput' class='selectBox'>
+                <ul></ul>
+              </div>
+              <div id='userInfoBirthPlaceCityInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userInfoSchoolArea' class='inputArea twoSelect'>
+              <div id='schoolProvinceInput' class='selectBox'>
+                <ul></ul>
+              </div>
+              <div id='userInfoSchoolInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userInfoDegreeArea' class='inputArea oneSelect'>
+              <div id="userInfoDegreeInput" class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userInfoOccupationArea' class='inputArea twoSelect'>
+              <div id='userInfoOccupationInput' class='selectBox'>
+                <ul></ul>
+              </div>
+              <div id='userInfoDomainInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userExpectationHeightArea' class='inputArea twoSelect'>
+              <div id="userExpectationMinHeightInput" class='selectBox'>
+                <ul></ul>
+              </div>
+              <span>到</span>
+              <div id="userExpectationMaxHeightInput" class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userExpectationAgeArea' class='inputArea twoSelect'>
+              <div id="userExpectationMinAgeInput" class='selectBox'>
+                <ul></ul>
+              </div>
+              <span>到</span>
+              <div id="userExpectationMaxAgeInput" class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userExpectationDegreeArea' class='inputArea twoSelect'>
+              <div id="userExpectationMinDegreeInput" class='selectBox'>
+                <ul></ul>
+              </div>
+              <span>到</span>
+              <div id="userExpectationMaxDegreeInput" class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userExpectationIdealLocationArea' class='inputArea twoSelect'>
+              <div id='userExpectationIdealLocationProvinceInput' class='selectBox'>
+                <ul></ul>
+              </div>
+              <div id='userExpectationIdealLocationCityInput' class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+            <div id='userExpectationLocationDistanceArea' class='inputArea oneSelect'>
+              <div id="userExpectationLocationDistanceInput" class='selectBox'>
+                <ul></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='userShowImgPage' class='piePage'>
+          <div id='userImgSwipe' class='swipe'>
+            <div class='swipe-wrap'></div>
+          </div>
+          <div class='imgHeader'>
+            <table>
+              <tbody>
+                <tr>
+                  <td width='20%' id='imgBack'>返回</td>
+                  <td width='60%' id='setHead'>设为头像</td>
+                  <td width='20%' id='deleteHead'>删除</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class='swipeFooter'></div>
+        </div>
+        <div id='pieMatchIndexPage' class='piePage'>
+          <div class='scrollArea'>
+            <div class='refreshArea'>
+              <table>
+                <tbody>
+                  <tr>
+                    <td width='30%'>
+                      <div class='refreshIcon'>
+                        <i class='icon-arrow-down'></i>
+                      </div>
+                    </td>
+                    <td>
+                      <div class='refreshText'></div>
+                      <div class='refreshTime'></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id='matchMain'>
+              <div id='matchStatus'>
+                <div id='matchStatusText'></div>
+                <div id='statusTime'></div>
+                <div id='finishInfoButton'>开始完善</div>
+                <div id='activateButton'>立即激活</div>
+              </div>
+              <img id='matchMateAvatar'/>
+              <div id='matchBottomBox'>
+                <div id='mateIntroduce'>
+                  <div id='mateProfileBox'>
+                    <div id='matchMateName'>小pie</div>
+                    <div id='matchMateProfile'>1992/双子座/北京市</div>
+                  </div>
+                  <div id='matchStatusBox'>
+                    <div id='mateDecisionBox'>
+                      <div id='mateDecisionText'>
+                        <i class='icon-ok'></i>
+                        <span>它已选择</span>
+                      </div>
+                    </div>
+                    <div id='countDownClock'>
+                      <div id='countDownIcon'>
+                        <img src='img/clock.png' height='24'>
+                      </div>
+                      <div id="countDownTime"></div>
+                      <div id='timeLeft'>
+                        <span>left</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id='matchControlBox'>
+                  <div id='matchControlLeftButton'>
+                    <div id='leftButtonIcon'>
+                      <i class='icon-heart'></i>
+                    </div>
+                    <div id='leftButtonText'>Like</div>
+                    <div class='unreadMessageNum' id='talkUnread'></div>
+                  </div>
+                  <div id='matchControlRightButton'>
+                    <div id='rightButtonIcon'>
+                      <i class='icon-play'></i>
+                    </div>
+                    <div id='rightButtonText'>Pass</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='mateHomePage' class='piePage'>
+          <div class='scrollArea'>
+            <div id='mateHomeGround'>
+              <div id='mateHomeHead'><img id='mateHomeAvatar'/></div>
+              <div id='mateHomeNavBox'>
+                <span id='matePersonalInfoNav'>个人信息</span>
+                <span id='mateMatchInfoNav'>匹配信息</span>
+                <span id='mateQAInfoNav'>问答信息</span>
+              </div>
+            </div>
+            <div id='matePersonalInfoArea'>
+              <div id='matePhotoBlock' class='mateInfoBlock'>
+              </div>
+              <div id='matePresentationBlock' class='mateInfoBlock'>
+                <div class='infoBlockTitle'>自我介绍</div>
+                <div class='container'>
+                  <div id='mateInfoPresentation' class='mateInfoItem noBorderTop'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class='mateInfoItemContent'>这个家伙什么都没有说</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div id='mateBasicInfoBlock' class='mateInfoBlock'>
+                <div class='infoBlockTitle'>基本资料</div>
+                <div class='container'>
+                  <div id='mateInfoNickname' class='mateInfoItem noBorderTop'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>昵称</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoSex' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>性别</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoHeight' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>身高</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoWeight' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>体重</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoBirthday' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>生日</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoCurrentLocation' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>住址</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoBirthPlace' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>籍贯</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoSchool' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>学校</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div id='mateInfoDegree' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>学历</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>           
+                  <div id='mateInfoOccupation' class='mateInfoItem'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='25%'>
+                            <div class='mateInfoItemName'>职业</div>
+                          </td>
+                          <td>
+                            <div class='mateInfoItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='mateMatchInfoArea'>
+              <div id='mateExpecationBlock' class='mateInfoBlock'>
+                <div class='infoBlockTitle'></div>
+                <div class='container'>
+                  <div class='mateExpectationItem noBorderTop' id='mateExpectationMinHeight'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='35%'>
+                            <div class='mateExpectationItemName'>身高要求</div>
+                          </td>
+                          <td>
+                            <div class='mateExpectationItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class='mateExpectationItem' id='mateExpectationMinAge'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='35%'>
+                            <div class='mateExpectationItemName'>年龄要求</div>
+                          </td>
+                          <td>
+                            <div class='mateExpectationItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class='mateExpectationItem' id='mateExpectationMinDegree'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='35%'>
+                            <div class='mateExpectationItemName'>学历要求</div>
+                          </td>
+                          <td>
+                            <div class='mateExpectationItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class='mateExpectationItem' id='mateExpectationIdealLocation'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='35%'>
+                            <div class='mateExpectationItemName'>理想城市</div>
+                          </td>
+                          <td>
+                            <div class='mateExpectationItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class='mateExpectationItem' id='mateExpectationDistance'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td width='35%'>
+                            <div class='mateExpectationItemName'>距离要求</div>
+                          </td>
+                          <td>
+                            <div class='mateExpectationItemContent'></div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='mateQAInfoArea'>
+              <div id='mateNoQA'>对方尚未作出任何回答</div>
+              <div id='mateQABlock' class='mateInfoBlock'>
+                <div class='infoBlockTitle'></div>
+                <div class='container noBorderTop' id='mateQAContainer'>
+                  <div id='answerTitle'></div>
+                  <div id='answerChoices'></div>
+                  <div id='answerNavBox'>
+                    <div id='lastAnswerNav'>上一题</div>
+                    <div id='nextAnswerNav'>下一题</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='mateShowImgPage' class='piePage'>
+          <div id='mateImgSwipe' class='swipe'>
+            <div class='swipe-wrap'></div>
+            <div class='swipeFooter'></div>
+          </div>
+        </div>
+        <div id='mateTalkPage' class='piePage'>
+          <div id='talkRecordArea'>
+            <div class='scrollArea'></div>
+          </div>
+          <div id='talkInputArea'>
+            <form id='talkForm'>
+              <input type='text' id='talkInput'/>
+            </form>
+          </div>
+        </div>
+        <div id='pieTestIndexPage' class='piePage'>
+          <div class='scrollArea'>
+            <div id='pieTestIntroduce'>PieMoment 专业心理分析团队精心打造的恋爱性格分析问卷，帮你精准分析你的恋爱偏好</div>
+            <div id='userTestNavArea'>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class='userTestNav' id='seeLifeNav'>
+                        <span>人生态度</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="userTestNav" id='personalityNav'>
+                        <span>性格特质</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='userTestNav' id='seeLoveNav'>
+                        <span>爱情态度</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class='userTestNav' id='communicationNav'>
+                        <span>交往模式</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id='userSeeLifeTestPage' class='piePage'>
+          <div class='scrollArea'>
+            <div class='testArea'>
+              <div class='testTitle'>正在获取题目……</div>
+              <div class='testReport'></div>
+              <div class='testQuestion'></div>
+              <div class='testChoices'>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td width='30%'>完全不同意</td>
+                      <td width='40%'>不确定</td>
+                      <td width='30%'>完全同意</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul id="seeLifeRating" class='userTestChoices'>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='userSeeLoveTestPage' class='piePage'>
+          <div class='scrollArea'>
+            <div class='testArea'>
+              <div class='testTitle'>正在获取题目……</div>
+              <div class='testReport'></div>
+              <div class='testQuestion'></div>
+              <div class='testChoices'>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td width='30%'>完全不同意</td>
+                      <td width='40%'>不确定</td>
+                      <td width='30%'>完全同意</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul id="seeLoveRating" class='userTestChoices'>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='userPersonalityTestPage' class='piePage'>
+          <div class='scrollArea'>
+            <div class='testArea'>
+              <div class='testTitle'>正在获取题目……</div>
+              <div class='testReport'></div>
+              <div class='testQuestion'></div>
+              <div class='testChoices'></div>
+            </div>
+          </div>
+        </div>
+        <div id='userCommunicationTestPage' class='piePage'>
+          <div class='scrollArea'>
+            <div class='testArea'>
+              <div class='testTitle'>正在获取题目……</div>
+              <div class='testReport'></div>
+              <div class='testQuestion'></div>
+              <div class='testChoices'>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td width='30%'>完全不同意</td>
+                      <td width='40%'>不确定</td>
+                      <td width='30%'>完全同意</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul id="communicationRating" class='userTestChoices'>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio id='loginMedia'>
+    </audio>
+    <audio id='messageMedia'>
+    </audio>
+    <script src='js/json2.min.js'></script>
+    <script src='js/jquery-2.0.3.min.js'></script>
+    <!--script src='cordova.js'></script-->
+    <script src='js/statusbarnotification.min.js'></script>
+    <script src='js/iscroll.min.js'></script>
+    <script src='js/socket.io.min.js'></script>
+    <script src='js/quo.min.js'></script>
+    <script src='js/school.min.js'></script>
+    <script src='js/location.min.js'></script>
+    <script src='js/swipe.min.js'></script>
+    <script src='js/jquery.color.min.js'></script>
+    <script src='js/dev.js'></script>
+  </body>
+</html>

@@ -1,0 +1,2417 @@
+@-webkit-keyframes pulse {
+  /* line 79, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  0% {
+    color: #006699; }
+
+  /* line 82, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  50% {
+    color: #006699; }
+
+  /* line 86, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  75% {
+    color: #006699; }
+
+  /* line 90, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  100% {
+    color: #f7f7f7; } }
+
+/* HTML Elements ****************************************************/
+/* line 100, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222222;
+  font: inherit; }
+
+@-webkit-keyframes fadeIn {
+  /* line 106, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  from {
+    opacity: 0; }
+
+  /* line 107, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse {
+  /* line 111, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  from {
+    opacity: 1; }
+
+  /* line 112, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  to {
+    opacity: 0.5; } }
+
+/* line 115, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+html {
+  -webkit-animation: fadeIn 500ms ease; }
+  /* line 116, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.index {
+    background: black; url("../img/bg.png");}
+  /* line 124, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html #main-container {
+    -webkit-transition: all 500ms ease 0s;
+    -moz-transition: all 500ms ease 0s;
+    -ms-transition: all 500ms ease 0s;
+    -o-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+    z-index: 4;
+    position: relative; }
+    @media (max-width: 768px) {
+      /* line 124, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      html #main-container {
+        -webkit-transform: translate3d(0, 0, 0); } }
+    @media (max-width: 768px) {
+      /* line 131, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      html #main-container.inactive {
+        -webkit-transform: translate3d(-100%, 0, 0); } }
+  /* line 138, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html img#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -26px;
+    margin-left: -16px;
+    height: 52px;
+    width: 32px;
+    z-index: 52; }
+  /* line 149, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.index img#loader {
+    margin-top: -44px;
+    margin-left: -30px;
+    height: 87px;
+    width: 61px; }
+  /* line 157, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.loading #main-container, html.loading .header-container {
+    opacity: 0;
+    pointer-events: none; }
+  /* line 161, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.loading img#loader {
+    -webkit-animation: pulse 1000ms ease infinite alternate;
+    display: block;
+    opacity: 1; }
+  /* line 166, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.loading footer {
+    opacity: 0; }
+
+/* line 172, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body {
+  color: #838383;
+  font: normal 400 16px/26px "minion-pro", "Times New Roman", Times, serif;
+  line-height: 1.4;
+  margin: 0; }
+  /* line 179, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body:after {
+    content: 'mobile';
+    display: none; }
+    @media (min-width: 769px) {
+      /* line 179, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body:after {
+        content: 'desktop'; } }
+
+/* line 188, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 193, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 198, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 0;
+  padding: 0; }
+
+/* line 207, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+img {
+  vertical-align: middle; }
+
+/* line 211, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* line 217, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+textarea {
+  resize: vertical; }
+
+/* line 221, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.chromeframe {
+  /*margin: 0.2em 0;*/
+  background: #ea4c89;rgb(255, 236, 13);#ccc;
+  color: #000;
+  padding-top: 20%;
+  /*padding: 300px 300px; */
+  /*padding-bottom: 900px;*/
+  /*color: #fff;*/
+  }
+  .chromeframe a {
+  color: rgb(255, 236, 13)
+  }
+
+/* line 231, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+h1 {
+  color: #333333;
+  line-height: 1;
+  font-weight: 100;
+  margin: 45px 0 6px;
+  font-size: 30px; }
+  @media (min-width: 769px) {
+    /* line 231, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    h1 {
+      font-size: 71px;
+      font-size: 50px; } }
+
+/* line 243, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+h2 {
+  color: #333333;
+  font-weight: 100;
+  line-height: 1;
+  margin: 45px 0 6px;
+  font-size: large; }
+  @media (min-width: 769px) {
+    /* line 243, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    h2 {
+      font-size: 36px; } }
+
+/* line 254, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+h3 {
+  font-size: small;
+  font-weight: 100;
+  line-height: 1;
+  color: #222222;
+  margin-bottom: 0; }
+  @media (min-width: 769px) {
+    /* line 254, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    h3 {
+      font-size: 26px; } }
+
+/* line 267, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+h4 {
+  font-size: 24px;
+  font-weight: 100; }
+
+/* line 272, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+p, ul {
+  font-size: 16px;
+  line-height: 1.5; }
+  @media (min-width: 769px) {
+    /* line 272, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    p, ul {
+      font-size: 20px;
+      line-height: 1.636; } }
+
+/* line 281, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+a {
+  color: #838383;
+  text-decoration: none;
+  -webkit-transition: color 1000ms ease;
+  transition: color 1000ms ease; }
+  /* line 286, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  a[href]:hover, a.current {
+    color: #222222;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms; }
+  /* line 291, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  a.button {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-transform: uppercase;
+    background-color: #ea4c89;#686868;
+    color: white;
+    display: inline-block;
+    margin: 1em auto;
+    padding: 1.5em 2.5em;
+    text-align: center;
+    -webkit-transition: background 500ms ease 0s;
+    -moz-transition: background 500ms ease 0s;
+    -ms-transition: background 500ms ease 0s;
+    -o-transition: background 500ms ease 0s;
+    transition: background 500ms ease 0s; }
+    /* line 303, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    a.button:hover {
+      background: #838383;
+      color: white; }
+
+/* General Stylesheet ***********************************************/
+/* line 312, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+p.caption {
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: normal;
+  margin: 0.5em 0 3em;
+  text-transform: uppercase; }
+  @media (min-width: 769px) {
+    /* line 312, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    p.caption {
+      font-size: 12px; } }
+
+/* ui/layout general components *************************************/
+/* line 326, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.icon {
+  background-size: 100px auto;
+  background-image: url("../img/sprite-jobs.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px; }
+  @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    /* line 326, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .icon {
+      background-image: url("../img/sprite-jobs@2x.png"); } }
+  /* line 337, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon.wave {
+    background-image: url("../img/sprite.png");
+    background-position: -10px -16px;
+    display: inline-block;
+    text-indent: -9999px;
+    height: auto;
+    width: 30px; }
+    @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+      /* line 337, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .icon.wave {
+        background-image: url("../img/sprite@2x.png"); } }
+    /* line 345, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .icon.wave .hover {
+      background-position: -60px -16px;
+      background-image: url("../img/sprite.png"); }
+      @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+        /* line 345, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .icon.wave .hover {
+          background-image: url("../img/sprite@2x.png"); } }
+  /* line 353, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon .hover {
+    opacity: 0;
+    -webkit-transition: opacity 500ms ease 0s;
+    -moz-transition: opacity 500ms ease 0s;
+    -ms-transition: opacity 500ms ease 0s;
+    -o-transition: opacity 500ms ease 0s;
+    transition: opacity 500ms ease 0s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  /* line 363, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon.phone {
+    background-position: 0 -50px; }
+  /* line 368, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon.Development {
+    background-position: 0 0; }
+    /* line 370, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .icon.Development .hover {
+      background-position: -50px 0; }
+  /* line 374, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon.Strategy {
+    background-position: 0 -50px; }
+    /* line 376, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .icon.Strategy .hover {
+      background-position: -50px -50px; }
+  /* line 380, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon.Design {
+    background-position: 0 -100px; }
+    /* line 382, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .icon.Design .hover {
+      background-position: -50px -100px; }
+  /* line 386, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon.Management {
+    background-position: 0 -150px; }
+    /* line 388, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .icon.Management .hover {
+      background-position: -50px -150px; }
+  /* line 392, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .icon.down {
+    background-position: -50px -350px; }
+
+/* line 399, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+a:hover .icon .hover,
+a.current .icon .hover,
+a.active .hover {
+  opacity: 1; }
+
+@media (min-width: 769px) {
+  /* line 404, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .left {
+    text-align: left; } }
+
+/* line 410, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+section {
+  position: relative; }
+
+/* line 415, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.grid-wrapper {
+  margin: auto;
+  max-width: 1680px;
+  max-width: 1024px;
+  max-width: 1200px;
+  max-width: 1366px; }
+  /* line 421, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .grid-wrapper .grid {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    overflow: hidden; 
+  }
+  .grid-wrapper .gridhiden {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    overflow:visible ; 
+  }
+    @media (max-width: 768px) {
+      /* line 428, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .grid-wrapper .grid .copy,
+      .grid-wrapper .grid .column {
+        margin: 0 1em; } }
+    @media (min-width: 769px) {
+      /* line 434, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .grid-wrapper .grid .copy {
+        margin: 0 auto 56px;
+        width: 650px; }
+      /* line 439, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .grid-wrapper .grid .column {
+        float: left;
+        position: relative;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0 40px; }
+        /* line 447, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.right {
+          float: right; }
+        /* line 450, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.one {
+          width: 10%; }
+        /* line 453, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.two {
+          width: 20%; }
+        /* line 456, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.three {
+          width: 30%; }
+        /* line 459, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.four {
+          width: 40%; }
+        /* line 462, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.five {
+          width: 50%; }
+        /* line 465, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.six {
+          width: 60%; }
+        /* line 468, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.seven {
+          width: 70%; }
+        /* line 471, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.eight {
+          width: 80%; }
+        /* line 474, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.nine {
+          width: 90%; }
+        /* line 477, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.ten {
+          width: 100%; }
+        /* line 480, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.push_one {
+          margin-left: 10%; }
+        /* line 483, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.push_two {
+          margin-left: 20%; }
+        /* line 486, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.push_three {
+          margin-left: 30%; }
+        /* line 489, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.push_four {
+          margin-left: 40%; }
+        /* line 492, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .grid-wrapper .grid .column.push_five {
+          margin-left: 50%; } }
+
+/* Layout ***********************************************************/
+/* line 502, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+nav#popout {
+  background: white;
+  opacity: 1;
+  -webkit-transition: all 500ms ease 0s;
+  -moz-transition: all 500ms ease 0s;
+  -ms-transition: all 500ms ease 0s;
+  -o-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+  -webkit-transform: translate3d(100%, 0, 0);
+  pointer-events: none;
+  position: fixed;
+  padding-top: 62px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1; }
+  /* line 517, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  nav#popout.active {
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate(0%, 0%);
+    opacity: 1;
+    pointer-events: auto; }
+  @media (min-width: 769px) {
+    /* line 502, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    nav#popout {
+      display: none; } }
+  /* line 530, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  nav#popout > a {
+    background: white;
+    border-top: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    color: #686868;
+    display: block;
+    padding: 20px 20px 19px;
+    text-align: center;
+    text-decoration: none; }
+    /* line 539, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    nav#popout > a:hover, nav#popout > a.current {
+      color: #222222; }
+
+/* Header */
+/* line 548, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.header-container {
+  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-transition: opacity 1000ms ease 0s;
+  -moz-transition: opacity 1000ms ease 0s;
+  -ms-transition: opacity 1000ms ease 0s;
+  -o-transition: opacity 1000ms ease 0s;
+  transition: opacity 1000ms ease 0s;
+  -webkit-transform: translate3d(0, 0, 0);
+  position: absolute;
+  z-index: 101;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  @media (max-width: 768px) {
+    /* line 548, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .header-container {
+      -webkit-transition: all 500ms ease 0s;
+      -moz-transition: all 500ms ease 0s;
+      -ms-transition: all 500ms ease 0s;
+      -o-transition: all 500ms ease 0s;
+      transition: all 500ms ease 0s; } }
+  /* line 571, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .header-container.fixed {
+    position: fixed;
+    top: 0 !important; }
+  @media (max-width: 768px) {
+    /* line 548, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .header-container {
+      position: fixed; } }
+  /* line 580, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .header-container .grid-wrapper {
+    max-width: none; }
+  /* line 583, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .header-container nav#main {
+    font: 16px/18px "minion-pro";
+    text-align: right; }
+    @media (max-width: 768px) {
+      /* line 583, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container nav#main {
+        display: none; } }
+    @media (min-width: 769px) {
+      /* line 583, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container nav#main {
+        display: block;
+        left: auto;
+        top: 0;
+        z-index: 3;
+        transform: none;
+        margin: 22px -20px 22px 0; } }
+    /* line 601, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .header-container nav#main > a {
+      box-sizing: border-box;
+      color: #838383;
+      display: block;
+      padding: 0 20px;
+      text-align: center;
+      text-decoration: none; }
+      /* line 609, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container nav#main > a:hover, .header-container nav#main > a.current {
+        color: #222222; }
+      @media (min-width: 769px) {
+        /* line 601, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .header-container nav#main > a {
+          border-right: 1px solid #f7f7f7;
+          border-top: none;
+          display: inline-block; }
+          /* line 617, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          .header-container nav#main > a:last-child {
+            border-right: none; }
+          /* line 622, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          .header-container nav#main > a.why {
+            display: none;
+            width: 27.9639%; } }
+          @media (min-width: 769px) and (min-width: 935px) {
+            /* line 622, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+            .header-container nav#main > a.why {
+              display: inline-block; } }
+    @media (min-width: 769px) {
+      /* line 652, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container nav#main.jobs > a:first-child {
+        color: #838383; }
+      /* line 655, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container nav#main.jobs > a:nth-child(3) {
+        padding: 22px 0 22px; }
+        /* line 657, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .header-container nav#main.jobs > a:nth-child(3):before {
+          color: #E0E0E0;
+          content: "|";
+          display: inline-block;
+          padding: 0 20px 0 0; }
+        /* line 663, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        .header-container nav#main.jobs > a:nth-child(3):after {
+          color: #E0E0E0;
+          content: "|";
+          display: inline-block;
+          padding: 0 0 0 20px; }
+      /* line 670, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container nav#main.jobs > a:last-child {
+        color: #222222;
+        padding-left: 40px;
+        padding-right: 0; } }
+  @media (max-width: 768px) {
+    /* line 683, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .header-container #logo {
+      margin: 0; } }
+  @media (min-width: 769px) {
+    /* line 683, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .header-container #logo {
+      position: absolute;
+      top: 0; } }
+  /* line 691, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .header-container #logo a {
+    background-image: url("../img/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 113px 16px;
+    display: block;
+    padding: 20px 40px;
+    padding: 20px 0;
+    text-indent: -9999px;
+    width: 113px; }
+    @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+      /* line 691, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container #logo a {
+        background-image: url("../img/logo@2x.png"); } }
+  /* line 707, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .header-container a#nav-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "Times New Roman";
+    font-size: 32px;
+    display: inline-block;
+    color: #222222;
+    padding: 25px;
+    text-decoration: none;
+    line-height: 16px; }
+    @media (min-width: 769px) {
+      /* line 707, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      .header-container a#nav-toggle {
+        display: none; } }
+
+/* Pages ************************************************************/
+/* line 727, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+* {
+  -webkit-backface-visibility: hidden; }
+
+/* line 732, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.full-width-image {
+  background-position: center;
+  background-size: cover;
+  height: 220px;
+  margin: 35px 0 0; }
+  @media (min-width: 769px) {
+    /* line 732, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    .full-width-image {
+      height: 463px;
+      margin: 59px 0 33px; } }
+
+/* line 743, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+#full-width-slideshow {
+  cursor: pointer;
+  height: 220px;
+  margin: 26px 0 0; }
+  @media (min-width: 769px) {
+    /* line 743, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    #full-width-slideshow {
+      height: 463px;
+      margin: 59px 0 33px; } }
+  /* line 752, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  #full-width-slideshow .slide {
+    bottom: 0;
+    pointer-events: none;
+    right: 0; }
+    /* line 756, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    #full-width-slideshow .slide .image {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center; }
+
+/* Index page */
+/* line 770, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+html.no-touch body.index section#what-we-do #projects-slideshow-wrapper .slide:hover > img {
+  opacity: 0; }
+
+/* line 773, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+html.touch body.index section#what-we-do #projects-slideshow-wrapper .slide.hover > img {
+  opacity: 0; }
+
+/* line 781, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.index .icon {
+  background-size: 100px auto;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative; }
+  @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    /* line 781, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index .icon {
+      background-image: url("../img/sprite@2x.png"); } }
+  /* line 791, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon .hover {
+    -webkit-transition: opacity 500ms ease 0s;
+    -moz-transition: opacity 500ms ease 0s;
+    -ms-transition: opacity 500ms ease 0s;
+    -o-transition: opacity 500ms ease 0s;
+    transition: opacity 500ms ease 0s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  /* line 800, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon:hover .hover {
+    opacity: 1; }
+  /* line 804, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon.address {
+    top: -5px;
+    background-position: -13px -259px; }
+    /* line 807, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index .icon.address .hover {
+      background-position: -63px -259px; }
+  /* line 811, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon.phone {
+    background-position: -14px -164px; }
+    /* line 813, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index .icon.phone .hover {
+      background-position: -64px -164px; }
+  /* line 817, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon.mail {
+    background-position: -13px -214px; }
+    /* line 819, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index .icon.mail .hover {
+      background-position: -63px -214px; }
+  /* line 823, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon.twitter {
+    background-position: -14px -312px; }
+    /* line 825, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index .icon.twitter .hover {
+      background-position: -64px -312px; }
+  /* line 829, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon.instagram {
+    background-position: -14px -363px; }
+    /* line 831, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index .icon.instagram .hover {
+      background-position: -64px -363px; }
+  /* line 836, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon.down-small {
+    background-position: 0 -100px; }
+    /* line 838, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index .icon.down-small .hover {
+      background-position: -50px -100px; }
+  /* line 842, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index .icon.hr {
+    background-position: 0 -50px; }
+/* line 849, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.index section {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center; }
+  /* line 857, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section:nth-child(even) {
+    background: #f7f7f7; }
+  /* line 860, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section:nth-child(odd) {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white; }
+/* line 867, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.index section#intro {
+  background: #ea4c89 url("../img/pielogo.png") center no-repeat;
+  /*background: #ea4c89 url("../img/i.jpg") center no-repeat;*/
+  /*-webkit-filter: blur(15px);*/
+/*   background-size: contain; */
+	background-size: 100px 100px;
+   }
+/* line 872, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.index section#who-we-are {
+  padding-bottom: 29px;
+}
+  @media (min-width: 769px) {
+    /* line 874, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#who-we-are h1 {
+      font-size: 76px;
+      margin-top: 143px; } }
+  /* line 879, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#who-we-are h1 .amp {
+    font-family: Georgia, "Times New Roman", Times, serif; }
+  /* line 883, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#who-we-are .body_text {
+    margin-top: 25px;
+    text-align: center;
+    margin-top: 45px; }
+    @media (min-width: 769px) {
+      /* line 886, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#who-we-are .body_text p, body.index section#who-we-are .body_text ul {
+        font-size: 24px; } }
+    /* line 892, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#who-we-are .body_text p span {
+      color: #222222; }
+    /* line 895, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#who-we-are .body_text ul {
+      color: black;
+      text-align: left;
+      line-height: 2;
+      margin: 0;
+      padding-left: 0;
+      display: inline-block;
+      list-style-type: disc;
+      width: 255px; }
+      @media (min-width: 769px) {
+        /* line 895, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#who-we-are .body_text ul {
+          font-size: 215x;
+          width: 700px; } }
+      /* line 908, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#who-we-are .body_text ul li {
+        white-space: nowrap;
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: middle; }
+        @media (min-width: 769px) {
+          /* line 908, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.index section#who-we-are .body_text ul li {
+            width: 50%; } }
+        /* line 917, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#who-we-are .body_text ul li:before {
+          margin-right: 10px;
+          content: "-";
+          font-size: 15px;
+          vertical-align: top; }
+          @media (min-width: 769px) {
+            /* line 917, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+            body.index section#who-we-are .body_text ul li:before {
+              margin-right: 20px;
+              font-size: 24px; } }
+    /* line 929, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#who-we-are .body_text p.scroll-down {
+      font-size: 18px;
+      font-style: italic;
+      margin: 100px 0 0; }
+  /* line 935, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#who-we-are #gin-lane-pencil {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+    max-height: 146px; }
+    @media (min-width: 769px) {
+      /* line 935, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#who-we-are #gin-lane-pencil {
+        margin: 65px auto 98px; } }
+  /* line 944, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#who-we-are .icon.hr {
+    margin: auto;
+    width: 50px;
+    height: 50px; }
+  /* line 951, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#who-we-are a.icon.down-small {
+    width: 50px;
+    height: 50px; }
+  section#great-users .friends-favorites {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+/* line 957, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.index section#what-we-do {
+  position: relative;
+  z-index: 1; }
+  /* line 960, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#what-we-do #projects-slideshow-wrapper {
+    margin: 20px auto 55px;
+    position: relative;
+    width: auto; }
+    @media (min-width: 769px) {
+      /* line 960, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper {
+        max-width: 980px; } }
+    @media (width: 768px) {
+      /* line 960, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper {
+        width: 768px; } }
+    /* line 970, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#what-we-do #projects-slideshow-wrapper #slideshow {
+      -webkit-user-select: none; }
+      @media (min-width: 769px) {
+        /* line 970, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper #slideshow {
+          margin: 0 50px 0; } }
+    /* line 977, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#what-we-do #projects-slideshow-wrapper .slide {
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      font-size: 18px;
+      line-height: 26px; }
+      /* line 986, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper .slide .info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        white-space: normal;
+        text-align: center;
+        -webkit-transition: opacity 1000ms ease 0s;
+        -moz-transition: opacity 1000ms ease 0s;
+        -ms-transition: opacity 1000ms ease 0s;
+        -o-transition: opacity 1000ms ease 0s;
+        transition: opacity 1000ms ease 0s; }
+        /* line 997, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox {
+          margin: auto;
+          height: 100%;
+          display: -webkit-box;
+          -webkit-box-orient: horizontal;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          display: -moz-box;
+          -moz-box-orient: horizontal;
+          -moz-box-pack: center;
+          -moz-box-align: center;
+          display: -ms-flexbox;
+          -ms-flex-align: center;
+          -ms-flex-pack: center;
+          -ms-flex-direction: row;
+          display: box;
+          box-orient: horizontal;
+          box-pack: center;
+          box-align: center; }
+          /* line 1019, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text {
+            width: 280px; }
+            @media (max-width: 768px) {
+              /* line 1019, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text {
+                font-size: 10px;
+                line-height: normal;
+                margin: 0 20px; } }
+            @media (width: 768px) {
+              /* line 1019, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text {
+                font-size: inherit;
+                width: 550px; } }
+            @media (min-width: 769px) {
+              /* line 1019, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text {
+                width: 550px; } }
+            /* line 1035, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+            body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text img.logo {
+              display: block;
+              margin: 0 auto 20px;
+              width: 300px;
+              height: 105px; }
+              @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+                /* line 1035, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text img.logo {
+                  display: none; } }
+              /* line 1045, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text img.logo.\@2x {
+                display: none; }
+                @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+                  /* line 1045, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                  body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text img.logo.\@2x {
+                    display: block; } }
+              @media (max-width: 768px) {
+                /* line 1035, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text img.logo {
+                  height: 52.5px;
+                  width: auto;
+                  margin-bottom: 10px; } }
+            /* line 1061, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+            body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text p a.button {
+              max-width: auto; }
+              @media (max-width: 768px) {
+                /* line 1061, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                body.index section#what-we-do #projects-slideshow-wrapper .slide .info .centerbox .text p a.button {
+                  font-size: 10px; } }
+        /* line 1072, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper .slide .info 閳ワ拷
+        .inner {
+          display: inline-block;
+          margin: auto; }
+          /* line 1075, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.index section#what-we-do #projects-slideshow-wrapper .slide .info 閳ワ拷
+          .inner .text {
+            line-height: norma; }
+      /* line 1080, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper .slide > img {
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+        position: relative;
+        opacity: 1;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: opacity 500ms ease 0s;
+        -moz-transition: opacity 500ms ease 0s;
+        -ms-transition: opacity 500ms ease 0s;
+        -o-transition: opacity 500ms ease 0s;
+        transition: opacity 500ms ease 0s; }
+        @media (width: 768px) {
+          /* line 1080, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.index section#what-we-do #projects-slideshow-wrapper .slide > img {
+            width: 768px; } }
+    /* line 1096, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#what-we-do #projects-slideshow-wrapper .cycle-pager span {
+      font-family: Arial, sans-serif;
+      font-size: 50px;
+      color: #D9D9D9;
+      cursor: pointer;
+      -webkit-transition: color 500ms ease 0s;
+      -moz-transition: color 500ms ease 0s;
+      -ms-transition: color 500ms ease 0s;
+      -o-transition: color 500ms ease 0s;
+      transition: color 500ms ease 0s; }
+      /* line 1102, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper .cycle-pager span:hover, body.index section#what-we-do #projects-slideshow-wrapper .cycle-pager span.cycle-pager-active {
+        color: #838383; }
+    /* line 1107, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#what-we-do #projects-slideshow-wrapper #controls {
+      display: none; }
+      @media (min-width: 769px) {
+        /* line 1107, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper #controls {
+          display: block; } }
+      /* line 1113, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper #controls .icon {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        z-index: 9999; }
+      /* line 1122, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper #controls .left {
+        background-position: 0px -400px;
+        left: 0; }
+        /* line 1125, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper #controls .left .hover {
+          background-position: -50px -400px; }
+        /* line 1128, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper #controls .left:hover .hover {
+          opacity: 1; }
+      /* line 1132, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#what-we-do #projects-slideshow-wrapper #controls .icon.right {
+        background-position: 0px -450px;
+        right: 0; }
+        /* line 1135, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper #controls .icon.right .hover {
+          background-position: -50px -450px; }
+        /* line 1140, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index section#what-we-do #projects-slideshow-wrapper #controls .icon.right:hover .hover, body.index section#what-we-do #projects-slideshow-wrapper #controls .icon.right.current .hover, body.index section#what-we-do #projects-slideshow-wrapper #controls .icon.right.active .hover {
+          opacity: 1; }
+    /* line 1145, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#what-we-do #projects-slideshow-wrapper #pager {
+      position: absolute;
+      width: 100%; }
+  /* line 1151, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#what-we-do .body_text a {
+    color: #222222; }
+    /* line 1153, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#what-we-do .body_text a:hover {
+      color: #838383; }
+/* line 1162, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.index section#contact {
+  padding: 0; }
+  /* line 1164, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index section#contact ul {
+    list-style-type: none;
+    padding-left: 0; }
+    /* line 1167, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index section#contact ul li {
+      display: inline-block;
+      vertical-align: top;
+      border-right: 1px solid #f7f7f7; }
+      /* line 1172, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index section#contact ul li:last-child {
+        border-right: none; }
+/* line 1183, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.index footer {
+  background: white;
+  width: 100%;
+  -webkit-transition: all 500ms ease 0s;
+  -moz-transition: all 500ms ease 0s;
+  -ms-transition: all 500ms ease 0s;
+  -o-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s; }
+  @media (min-width: 769px) {
+    /* line 1183, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index footer {
+      display: table; } }
+  /* line 1190, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index footer.inactive {
+    -webkit-transform: translate3d(-100%, 0, 0); }
+    @media (min-width: 769px) {
+      /* line 1190, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index footer.inactive {
+        -webkit-transform: none; } }
+  /* line 1196, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.index footer .link {
+    display: block;
+    padding: 25px 0 25px 15px;
+    -webkit-transition: background 1000ms ease 0s;
+    -moz-transition: background 1000ms ease 0s;
+    -ms-transition: background 1000ms ease 0s;
+    -o-transition: background 1000ms ease 0s;
+    transition: background 1000ms ease 0s; }
+    @media (min-width: 769px) {
+      /* line 1196, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index footer .link {
+        border-right: 1px solid #f2f2f2;
+        color: #838383;
+        display: table-cell;
+        text-align: center;
+        white-space: nowrap; } }
+    /* line 1206, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index footer .link .copy {
+      padding-left: 33px;
+      -webkit-transition: color 1000ms ease 0s;
+      -moz-transition: color 1000ms ease 0s;
+      -ms-transition: color 1000ms ease 0s;
+      -o-transition: color 1000ms ease 0s;
+      transition: color 1000ms ease 0s;
+      position: relative; }
+      @media (min-width: 769px) {
+        /* line 1206, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index footer .link .copy {
+          padding-left: 0; } }
+      /* line 1213, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index footer .link .copy > .icon {
+        position: absolute;
+        left: 0;
+        width: 23px;
+        height: 23px;
+        background-color: white; }
+        @media (min-width: 769px) {
+          /* line 1213, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.index footer .link .copy > .icon {
+            left: -33px; } }
+        /* line 1222, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index footer .link .copy > .icon .icon.hover {
+          background-color: #EFEFEF;
+          left: 0;
+          width: 23px;
+          height: 23px;
+          -webkit-transition: opacity 1000ms ease 0s;
+          -moz-transition: opacity 1000ms ease 0s;
+          -ms-transition: opacity 1000ms ease 0s;
+          -o-transition: opacity 1000ms ease 0s;
+          transition: opacity 1000ms ease 0s; }
+    /* line 1232, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.index footer .link:hover {
+      background: #EFEFEF;
+      -webkit-transition: background 500ms ease 0s;
+      -moz-transition: background 500ms ease 0s;
+      -ms-transition: background 500ms ease 0s;
+      -o-transition: background 500ms ease 0s;
+      transition: background 500ms ease 0s; }
+      /* line 1235, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.index footer .link:hover .copy {
+        color: #222222;
+        -webkit-transition: color 500ms ease 0s;
+        -moz-transition: color 500ms ease 0s;
+        -ms-transition: color 500ms ease 0s;
+        -o-transition: color 500ms ease 0s;
+        transition: color 500ms ease 0s; }
+        /* line 1238, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.index footer .link:hover .copy > .icon {
+          background-color: transparent; }
+          /* line 1240, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.index footer .link:hover .copy > .icon .icon.hover {
+            opacity: 1; }
+
+@media (min-width: 769px) {
+  /* line 1255, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.flexbox body.index section#contact ul {
+    display: -webkit-box; }
+    /* line 1257, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    html.flexbox body.index section#contact ul li {
+      display: block;
+      -webkit-box-flex: 1; }
+
+  /* line 1266, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.no-flexbox body.index section#contact ul li.phone {
+    width: 16%; }
+  /* line 1269, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.no-flexbox body.index section#contact ul li.email {
+    width: 23%; }
+  /* line 1272, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.no-flexbox body.index section#contact ul li.address {
+    width: 28%; }
+  /* line 1275, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.no-flexbox body.index section#contact ul li.twitter {
+    width: 16%; }
+  /* line 1278, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  html.no-flexbox body.index section#contact ul li.instagram {
+    width: 16%; } }
+/* Jobs */
+/* line 1288, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+html.no-touch body.join section#great-projects #projects-slideshow-wrapper .slide:hover > img {
+  opacity: 0; }
+
+/* line 1291, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+html.touch body.join section#great-projects #projects-slideshow-wrapper .slide.hover > img {
+  opacity: 0; }
+
+/* line 1297, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-top: 62px;
+  padding-bottom: 62px;
+  text-align: center; }
+  /* line 1305, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section:nth-child(even) {
+    background: #f7f7f7; }
+  /* line 1308, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section:nth-child(odd) {
+    background: white; }
+/* line 1313, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#intro {
+  position: relative;
+  text-align: center;
+  z-index: 4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  @media (max-width: 768px) {
+    /* line 1313, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#intro {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); } }
+  /* line 1321, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#intro #splash-image {
+    background-size: cover;
+    overflow: hidden;
+    position: relative; }
+  /* line 1326, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#intro h1 {
+    text-shadow: 1px 1px #838383;
+    color: white;
+    font-size: 54px;
+    margin: -27px 0 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0; }
+    @media (min-width: 769px) {
+      /* line 1326, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#intro h1 {
+        font-size: 120px;
+        margin: -60px 0 0; } }
+    /* line 1339, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#intro h1 .W {
+      letter-spacing: -3px; }
+      @media (min-width: 769px) {
+        /* line 1339, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#intro h1 .W {
+          letter-spacing: -12px; } }
+    /* line 1345, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#intro h1 .e {
+      letter-spacing: 0; }
+  /* line 1349, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#intro .icon {
+    margin: 50px 5px 25px; }
+  /* line 1352, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#intro .intro-text > p:last-child {
+    color: #222222; }
+/* line 1359, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#why-work-at-gin-lane .copy > p:last-child {
+  color: #222222; }
+/* line 1363, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#why-work-at-gin-lane .down-arow {
+  margin: 62px 0 0; }
+@media (min-width: 769px) {
+  /* line 1375, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#great-environment .text h3, body.join section#great-environment .text p {
+    text-align: left; } }
+/* line 1382, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#great-environment .friends-favorites {
+  margin-top: 45px; }
+/* line 1387, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#great-environment aside p {
+  font-size: 19px; }
+/* line 1391, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#great-environment ul#locations {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  text-align: left; }
+  @media (min-width: 769px) {
+    /* line 1391, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-environment ul#locations {
+      -webkit-columns: 4;
+      -moz-columns: 4;
+      columns: 4; } }
+  /* line 1407, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#great-environment ul#locations a {
+    display: block;
+    height: 110px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    -webkit-transition: opacity 500ms ease 0s;
+    -moz-transition: opacity 500ms ease 0s;
+    -ms-transition: opacity 500ms ease 0s;
+    -o-transition: opacity 500ms ease 0s;
+    transition: opacity 500ms ease 0s;
+    text-indent: -9999px; }
+    @media (min-width: 769px) {
+      /* line 1407, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-environment ul#locations a {
+        background-size: 150px auto; } }
+    /* line 1417, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-environment ul#locations a:hover {
+      opacity: .5; }
+/* line 1425, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#great-projects {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; }
+  /* line 1429, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#great-projects #projects-slideshow-wrapper {
+    margin: 59px auto 100px;
+    position: relative;
+    width: auto; }
+    @media (min-width: 769px) {
+      /* line 1429, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper {
+        max-width: 980px; } }
+    @media (width: 768px) {
+      /* line 1429, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper {
+        width: 768px; } }
+    /* line 1439, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-projects #projects-slideshow-wrapper #slideshow {
+      -webkit-user-select: none; }
+      @media (min-width: 769px) {
+        /* line 1439, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#great-projects #projects-slideshow-wrapper #slideshow {
+          margin: 0 50px 0; } }
+    /* line 1446, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-projects #projects-slideshow-wrapper .slide {
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      font-size: 18px;
+      line-height: 26px; }
+      /* line 1454, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper .slide .info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        white-space: normal;
+        text-align: center;
+        -webkit-transition: opacity 1000ms ease 0s;
+        -moz-transition: opacity 1000ms ease 0s;
+        -ms-transition: opacity 1000ms ease 0s;
+        -o-transition: opacity 1000ms ease 0s;
+        transition: opacity 1000ms ease 0s; }
+        /* line 1463, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox {
+          margin: auto;
+          height: 100%;
+          display: -webkit-box;
+          -webkit-box-orient: horizontal;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          display: -moz-box;
+          -moz-box-orient: horizontal;
+          -moz-box-pack: center;
+          -moz-box-align: center;
+          display: -ms-flexbox;
+          -ms-flex-align: center;
+          -ms-flex-pack: center;
+          -ms-flex-direction: row;
+          display: box;
+          box-orient: horizontal;
+          box-pack: center;
+          box-align: center; }
+          /* line 1485, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text {
+            width: 280px; }
+            @media (max-width: 768px) {
+              /* line 1485, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text {
+                font-size: 10px;
+                line-height: normal;
+                margin: 0 20px; } }
+            @media (width: 768px) {
+              /* line 1485, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text {
+                font-size: inherit;
+                width: 550px; } }
+            @media (min-width: 769px) {
+              /* line 1485, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text {
+                width: 550px; } }
+            /* line 1500, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+            body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text img.logo {
+              display: block;
+              margin: 0 auto 20px;
+              width: 300px;
+              height: 105px; }
+              @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+                /* line 1500, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text img.logo {
+                  display: none; } }
+              /* line 1510, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+              body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text img.logo.\@2x {
+                display: none; }
+                @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+                  /* line 1510, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                  body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text img.logo.\@2x {
+                    display: block; } }
+              @media (max-width: 768px) {
+                /* line 1500, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text img.logo {
+                  height: 52.5px;
+                  width: auto;
+                  margin-bottom: 10px; } }
+            /* line 1526, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+            body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text p a.button {
+              max-width: auto; }
+              @media (max-width: 768px) {
+                /* line 1526, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+                body.join section#great-projects #projects-slideshow-wrapper .slide .info .centerbox .text p a.button {
+                  font-size: 10px; } }
+        /* line 1536, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#great-projects #projects-slideshow-wrapper .slide .info 閳ワ拷
+        .inner {
+          display: inline-block;
+          margin: auto; }
+          /* line 1539, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.join section#great-projects #projects-slideshow-wrapper .slide .info 閳ワ拷
+          .inner .text {
+            line-height: norma; }
+      /* line 1544, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper .slide > img {
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        pointer-events: none;
+        position: relative;
+        opacity: 1;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: opacity 500ms ease 0s;
+        -moz-transition: opacity 500ms ease 0s;
+        -ms-transition: opacity 500ms ease 0s;
+        -o-transition: opacity 500ms ease 0s;
+        transition: opacity 500ms ease 0s; }
+        @media (width: 768px) {
+          /* line 1544, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.join section#great-projects #projects-slideshow-wrapper .slide > img {
+            width: 768px; } }
+    /* line 1559, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-projects #projects-slideshow-wrapper .cycle-pager span {
+      font-family: Arial, sans-serif;
+      font-size: 50px;
+      color: #D9D9D9;
+      cursor: pointer;
+      -webkit-transition: color 500ms ease 0s;
+      -moz-transition: color 500ms ease 0s;
+      -ms-transition: color 500ms ease 0s;
+      -o-transition: color 500ms ease 0s;
+      transition: color 500ms ease 0s; }
+      /* line 1565, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper .cycle-pager span:hover, body.join section#great-projects #projects-slideshow-wrapper .cycle-pager span.cycle-pager-active {
+        color: #838383; }
+    /* line 1570, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-projects #projects-slideshow-wrapper #controls {
+      display: none; }
+      @media (min-width: 769px) {
+        /* line 1570, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#great-projects #projects-slideshow-wrapper #controls {
+          display: block; } }
+      /* line 1576, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper #controls .icon {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        z-index: 9999; }
+        /* line 1584, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#great-projects #projects-slideshow-wrapper #controls .icon:hover {
+          opacity: .5; }
+      /* line 1588, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper #controls .left {
+        background-position: 0px -300px;
+        left: 0; }
+      /* line 1592, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#great-projects #projects-slideshow-wrapper #controls .icon.right {
+        background-position: -50px -300px;
+        right: 0; }
+    /* line 1597, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-projects #projects-slideshow-wrapper #pager {
+      position: absolute;
+      width: 100%; }
+  /* line 1603, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#great-projects .copy a {
+    color: #222222; }
+    /* line 1605, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#great-projects .copy a:hover {
+      color: #838383; }
+/* line 1611, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#positions {
+  padding-bottom: 0; }
+  /* line 1613, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#positions .body_text > p:last-child {
+    color: #222222; }
+/* line 1619, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#jobs {
+  background: white; }
+  /* line 1622, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#jobs .grid-wrapper {
+    background: #f7f7f7;
+    border-top: 1px solid #e6e6e6; }
+  /* line 1627, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#jobs .grid.departments {
+    text-align: left; }
+    @media (min-width: 769px) {
+      /* line 1627, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#jobs .grid.departments {
+        margin: 0 10px;
+        overflow: visible;
+        text-align: center; } }
+  /* line 1635, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#jobs .category {
+    display: inline-block;
+    width: 50%;
+    -webkit-transition: background 500ms ease 0s;
+    -moz-transition: background 500ms ease 0s;
+    -ms-transition: background 500ms ease 0s;
+    -o-transition: background 500ms ease 0s;
+    transition: background 500ms ease 0s;
+    margin: 0;
+    padding: 0; }
+    @media (min-width: 769px) {
+      /* line 1635, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#jobs .category {
+        display: inline-block;
+        float: none;
+        width: 20%; } }
+    /* line 1646, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#jobs .category .inner {
+      margin: 1em 0;
+      text-align: center; }
+      @media (min-width: 769px) {
+        /* line 1646, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#jobs .category .inner {
+          margin: 40px 0;
+          border-right: 1px solid #e6e6e6; } }
+      /* line 1653, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#jobs .category .inner > .icon {
+        vertical-align: top; }
+        @media (min-width: 769px) {
+          /* line 1653, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.join section#jobs .category .inner > .icon {
+            margin-bottom: 6px; } }
+      /* line 1659, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#jobs .category .inner .text {
+        display: block; }
+        @media (max-width: 768px) {
+          /* line 1661, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.join section#jobs .category .inner .text h3 {
+            font-size: 20px; } }
+        @media (min-width: 769px) {
+          /* line 1659, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+          body.join section#jobs .category .inner .text {
+            display: block; } }
+    /* line 1671, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#jobs .category:last-child .inner {
+      border-right: none; }
+    /* line 1675, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#jobs .category h3 {
+      color: #838383;
+      margin: 0 0 6px; }
+    /* line 1682, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#jobs .category[href] h3 {
+      color: #222222; }
+    /* line 1685, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#jobs .category[href]:after {
+      opacity: 0;
+      -webkit-transition: opacity 1000ms ease 0s;
+      -moz-transition: opacity 1000ms ease 0s;
+      -ms-transition: opacity 1000ms ease 0s;
+      -o-transition: opacity 1000ms ease 0s;
+      transition: opacity 1000ms ease 0s;
+      background-image: url("/img/or.png");
+      background-size: 28px 15px;
+      content: "";
+      position: absolute;
+      left: 50%;
+      margin-left: -14px;
+      bottom: 0;
+      margin-bottom: -15px;
+      width: 28px;
+      height: 15px;
+      z-index: 1; }
+      @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+        /* line 1685, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#jobs .category[href]:after {
+          background-image: url("/img/or@2x.png"); } }
+    /* line 1703, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#jobs .category[href]:hover, body.join section#jobs .category[href].current {
+      background: white; }
+      /* line 1705, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#jobs .category[href]:hover .icon.hover, body.join section#jobs .category[href].current .icon.hover {
+        opacity: 1; }
+      /* line 1708, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#jobs .category[href]:hover:after, body.join section#jobs .category[href].current:after {
+        opacity: 1; }
+/* line 1716, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join > .icon {
+  margin: 1em 0 0; }
+/* line 1719, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join hr.top {
+  border-top: none;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0; }
+/* line 1724, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join hr.bottom {
+  border-color: #e6e6e6;
+  margin: 0 0 62px; }
+/* line 1728, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join #related-jobs {
+  padding-top: 62px;
+  font-size: larger; }
+  /* line 1731, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join #related-jobs a {
+    display: block;
+    padding: 8px 0; }
+/* line 1737, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join #posting-content {
+  padding-top: 62px;
+  text-align: left;
+  -webkit-transition: opacity 500ms ease 0s;
+  -moz-transition: opacity 500ms ease 0s;
+  -ms-transition: opacity 500ms ease 0s;
+  -o-transition: opacity 500ms ease 0s;
+  transition: opacity 500ms ease 0s; }
+  /* line 1741, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join #posting-content.loading {
+    opacity: 0; }
+  /* line 1744, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join #posting-content > :first-child {
+    margin-top: 8px; }
+  /* line 1749, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join #posting-content h3 {
+    margin: 2em 0 0; }
+    /* line 1752, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join #posting-content h3 + p, body.join #posting-content h3 + ul {
+      margin-top: .5em; }
+  /* line 1758, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join #posting-content p, body.join #posting-content ul {
+    font-size: medium;
+    line-height: 1.625; }
+    @media (min-width: 769px) {
+      /* line 1758, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join #posting-content p, body.join #posting-content ul {
+        font-size: large;
+        line-height: 1.636; } }
+/* line 1771, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.join section#apply {
+  padding: 0 0 200px;
+  text-align: left; }
+  @media (max-width: 768px) {
+    /* line 1771, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply {
+      text-align: center; } }
+  @media (max-width: 768px) {
+    /* line 1776, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply h2 {
+      display: none; } }
+  /* line 1781, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#apply h1 {
+    margin: 0; }
+    @media (max-width: 768px) {
+      /* line 1781, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#apply h1 {
+        display: none; } }
+  /* line 1788, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#apply p {
+    font-size: 18px; }
+  /* line 1794, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.join section#apply form {
+    display: none;
+    font-size: 20px; }
+    @media (min-width: 769px) {
+      /* line 1794, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#apply form {
+        display: none;
+        margin: 0; } }
+    /* line 1801, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply form label {
+      cursor: pointer;
+      display: inline-block;
+      margin: 2em 0 1em; }
+    /* line 1807, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply form input,
+    body.join section#apply form textarea {
+      background: white;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 1px;
+      box-sizing: border-box;
+      padding: .5em; }
+      /* line 1814, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#apply form input:focus,
+      body.join section#apply form textarea:focus {
+        background: #E5F6FF;
+        outline-style: none; }
+    /* line 1819, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply form input {
+      width: 100%; }
+      @media (min-width: 769px) {
+        /* line 1819, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#apply form input {
+          width: 50%; } }
+    /* line 1825, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply form textarea {
+      resize: none;
+      width: 100%;
+      height: 286px; }
+    /* line 1831, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply form .thank-you {
+      color: #41b9ff;
+      text-align: center; }
+    /* line 1836, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply form button {
+      background: #838383;
+      border: none;
+      color: white;
+      font-size: 24px;
+      line-height: 3;
+      padding: 0 1em;
+      -webkit-appearance: none;
+      -webkit-transition: background 1000ms ease 0s;
+      -moz-transition: background 1000ms ease 0s;
+      -ms-transition: background 1000ms ease 0s;
+      -o-transition: background 1000ms ease 0s;
+      transition: background 1000ms ease 0s; }
+      /* line 1845, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.join section#apply form button:hover {
+        background: #41b9ff;
+        -webkit-transition: background 500ms ease 0s;
+        -moz-transition: background 500ms ease 0s;
+        -ms-transition: background 500ms ease 0s;
+        -o-transition: background 500ms ease 0s;
+        transition: background 500ms ease 0s; }
+      @media (min-width: 769px) {
+        /* line 1836, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.join section#apply form button {
+          width: 50%; } }
+  @media (max-width: 768px) {
+    /* line 1855, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.join section#apply .button {
+      display: inline-block; } }
+
+/* Work Page */
+/* line 1882, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.work .detail {
+  margin: 55px 0;
+  padding-right: 156px; }
+/* line 1887, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.work ul#filters {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin-top: 47px;
+  font: 12px/1 "minion-pro";
+  letter-spacing: 2px;
+  padding-left: 0;
+  text-transform: uppercase; }
+  /* line 1895, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters li {
+    display: inline-block;
+    width: 20%; }
+    /* line 1898, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.work ul#filters li a {
+      cursor: pointer;
+      display: block;
+      line-height: 72px;
+      padding-left: 50px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-transition: background-color 1000ms ease 0s;
+      -moz-transition: background-color 1000ms ease 0s;
+      -ms-transition: background-color 1000ms ease 0s;
+      -o-transition: background-color 1000ms ease 0s;
+      transition: background-color 1000ms ease 0s; }
+      /* line 1907, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.work ul#filters li a:hover {
+        background-color: black;
+        -webkit-transition: background-color 500ms ease 0s;
+        -moz-transition: background-color 500ms ease 0s;
+        -ms-transition: background-color 500ms ease 0s;
+        -o-transition: background-color 500ms ease 0s;
+        transition: background-color 500ms ease 0s; }
+  /* line 1913, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .campaign {
+    background: red; }
+  /* line 1916, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .identity {
+    background: orange; }
+  /* line 1919, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .ux\/ui {
+    background: yellow; }
+  /* line 1922, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .commerce {
+    background: green; }
+  /* line 1925, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .social {
+    background: blue; }
+  /* line 1928, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .app {
+    background: indigo; }
+  /* line 1931, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .web {
+    background: violet; }
+  /* line 1934, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .installation {
+    background: lightgrey; }
+  /* line 1937, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .photo-video {
+    background: magenta; }
+  /* line 1940, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work ul#filters .magic {
+    background: teal; }
+/* line 1944, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.work #projects-wrapper {
+  overflow: hidden; }
+  /* line 1948, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work #projects-wrapper .project {
+    display: inline-block;
+    margin: 0 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative; }
+    /* line 1955, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.work #projects-wrapper .project .client {
+      display: -webkit-box;
+      display: -moz-flexbox;
+      display: -ms-flexbox;
+      display: -o-flexbox;
+      display: flexbox;
+      -webkit-flex-pack: center;
+      -moz-flex-pack: center;
+      -ms-flex-pack: center;
+      -o-flex-pack: center;
+      -webkit-flex-align: center;
+      -moz-flex-align: center;
+      -ms-flex-align: center;
+      -o-flex-align: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      -ms-box-align: center;
+      box-align: center;
+      display: flexbox;
+      margin: 0 1em;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center; }
+      /* line 1996, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.work #projects-wrapper .project .client span {
+        display: inline-block;
+        width: 100%; }
+    /* line 2002, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.work #projects-wrapper .project img {
+      line-height: 1px;
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+      opacity: 1;
+      -webkit-transition: opacity 1000ms ease 0s;
+      -moz-transition: opacity 1000ms ease 0s;
+      -ms-transition: opacity 1000ms ease 0s;
+      -o-transition: opacity 1000ms ease 0s;
+      transition: opacity 1000ms ease 0s; }
+    /* line 2012, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.work #projects-wrapper .project:hover img {
+      opacity: 0;
+      -webkit-transition: opacity 500ms ease 0s;
+      -moz-transition: opacity 500ms ease 0s;
+      -ms-transition: opacity 500ms ease 0s;
+      -o-transition: opacity 500ms ease 0s;
+      transition: opacity 500ms ease 0s; }
+  /* line 2019, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work #projects-wrapper #showcases {
+    -webkit-column-gap: 4px;
+    -webkit-column-count: 2;
+    -moz-column-gap: 4px;
+    -moz-column-count: 2;
+    column-gap: 4px;
+    column-count: 2; }
+    @media (min-width: 769px) {
+      /* line 2019, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.work #projects-wrapper #showcases {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3; } }
+    /* line 2042, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.work #projects-wrapper #showcases .project {
+      overflow: hidden;
+      width: 100%; }
+  /* line 2053, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.work #projects-wrapper #projects {
+    -webkit-column-gap: 4px;
+    -webkit-column-count: 3;
+    -moz-column-gap: 4px;
+    -moz-column-count: 3;
+    column-gap: 4px;
+    column-count: 3; }
+    @media (min-width: 769px) {
+      /* line 2053, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.work #projects-wrapper #projects {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4; } }
+
+/* line 2088, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+html.touch body.work #projects-wrapper .project img {
+  opacity: .2; }
+
+/* Bucket GREAT TEAM ************************************************/
+/* line 2095, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+section#great-team {
+  position: relative;
+  z-index: 2; }
+  /* line 2098, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  section#great-team #employees {
+    margin: 40px 0 15px;
+    width: auto !important;
+    font-size: 0;
+  }
+    /* line 2101, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    section#great-team #employees .employee {
+      vertical-align: top;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      width: 50%; 
+    }
+      @media (width: 768px) {
+        /* line 2101, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        section#great-team #employees .employee {
+          width: 384px; } }
+      @media (width: 1024px) {
+        /* line 2101, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        section#great-team #employees .employee {
+          width: 102px; } }
+      @media (min-width: 769px) {
+        /* line 2101, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        section#great-team #employees .employee {
+          width: 12.5%; } }
+      /* line 2119, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      section#great-team #employees .employee .description {
+        background: rgba(255, 255, 255, 0.95);
+        cursor: pointer;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+        display: box;
+        box-orient: vertical;
+        box-pack: center;
+        box-align: center;
+        display: -ms-flexbox;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        -ms-flex-direction: column; }
+        /* line 2160, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        section#great-team #employees .employee .description h3 {
+          margin-top: 0; }
+          @media (max-width: 768px) {
+            /* line 2160, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+            section#great-team #employees .employee .description h3 {
+              font-size: 20px; } }
+        /* line 2166, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        section#great-team #employees .employee .description p.caption {
+          margin-bottom: 0; }
+      /* line 2171, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      section#great-team #employees .employee img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        -webkit-transition: opacity 1000ms ease 0s;
+        -moz-transition: opacity 1000ms ease 0s;
+        -ms-transition: opacity 1000ms ease 0s;
+        -o-transition: opacity 1000ms ease 0s;
+        transition: opacity 1000ms ease 0s; }
+        /* line 2177, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        section#great-team #employees .employee img:hover, section#great-team #employees .employee img .hover {
+          opacity: 0;
+          -webkit-transition: opacity 500ms ease 0s;
+          -moz-transition: opacity 500ms ease 0s;
+          -ms-transition: opacity 500ms ease 0s;
+          -o-transition: opacity 500ms ease 0s;
+          transition: opacity 500ms ease 0s; }
+
+/* line 2187, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.showcase h1 {
+  font-size: 48px; }
+/* line 2191, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.showcase section#hero-image {
+  position: relative;
+  height: 220px;
+  background-color: #838383;
+  background-position: center;
+  background-size: cover;
+  padding-top: 0;
+  margin-top: 62px; }
+  /* line 2199, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.showcase section#hero-image .pagination {
+    display: none; }
+    @media (min-width: 769px) {
+      /* line 2199, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.showcase section#hero-image .pagination {
+        display: block;
+        color: white;
+        font: italic 18px/1 "minion-pro", serif;
+        position: absolute;
+        top: 100px;
+        margin-top: 25px; }
+        /* line 2208, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.showcase section#hero-image .pagination#prev {
+          left: 40px; }
+        /* line 2212, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+        body.showcase section#hero-image .pagination#next {
+          right: 40px; } }
+  /* line 2218, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.showcase section#hero-image img.logo {
+    display: none; }
+    @media (min-width: 769px) {
+      /* line 2218, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+      body.showcase section#hero-image img.logo {
+        display: block;
+        margin: 40px auto 0;
+        height: 97px;
+        width: auto; } }
+/* line 2235, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.showcase section#description h1 {
+  margin-top: 0; }
+/* line 2238, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.showcase section#description p.caption {
+  margin: 1em 0; }
+/* line 2241, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.showcase section#description .body {
+  line-height: 1.5; }
+  @media (min-width: 769px) {
+    /* line 2241, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+    body.showcase section#description .body {
+      font-size: 20px; } }
+/* line 2247, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+body.showcase section#description dl {
+  margin: 0;
+  text-align: center; }
+  /* line 2250, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.showcase section#description dl dt {
+    color: #222222;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0 0 6px; }
+  /* line 2256, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  body.showcase section#description dl dd {
+    font-family: "Minion Pro";
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 1em 0 3em;
+    text-transform: uppercase; }
+
+/* ==========================================================================
+	 Helper classes
+	 ========================================================================== */
+/* line 2272, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+/* line 2283, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.ir br {
+  display: none; }
+
+/* line 2286, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%; }
+
+/* line 2293, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* line 2298, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 2310, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/* line 2319, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.invisible {
+  visibility: hidden; }
+
+/* line 2324, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+/* line 2329, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 2333, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+.clearfix {
+  *zoom: 1; }
+
+/* ==========================================================================
+	 Print styles
+	 ========================================================================== */
+@media print {
+  /* line 2342, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 2350, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 2354, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 2358, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 2368, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  /* line 2373, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+
+  /* line 2378, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  /* line 2383, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 2387, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  /* line 2397, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 2403, /Volumes/Storage/michaelburtonray/Sites/ginlane/css/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+    section#lets-talk .full-width-image {
+   background-image: url('../img/3360d2d3592c8a1a9fc3bd84e16ecd11-.jpg');
+  }
+
+ section#great-users.reason.one .full-width-image {
+   background-image: url('../img/users.jpg');
+ }
+
+
+ section#great-users .pku {
+  background-image: url('../img/pku.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .pku {
+   background-image: url('../img/pku.png');
+ }  
+}
+
+section#great-users .tsinghua {
+  background-image: url('../img/logo/tsinghua.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .tsinghua {
+   background-image: url('../img/logo/tsinghua.png');
+ }  
+}
+
+section#great-users .renda {
+  background-image: url('../img/logo/renda.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .renda {
+   background-image: url('../img/logo/renda.png');
+ }  
+}
+
+section#great-users .zheda {
+  background-image: url('../img/logo/zheda.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .zheda {
+   background-image: url('../img/logo/zheda.png');
+ }  
+}
+
+section#great-users .zhongshan {
+  background-image: url('../img/logo/zhongshan.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .zhongshan {
+   background-image: url('../img/logo/zhongshan.png');
+ }  
+}
+
+section#great-users .fudan {
+  background-image: url('../img/logo/fudan.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .fudan {
+   background-image: url('../img/logo/fudan.png');
+ }  
+}
+
+section#great-users .shida {
+  background-image: url('../img/logo/shida.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .shida {
+   background-image: url('../img/logo/shida.png');
+ }  
+}
+
+section#great-users .nanjing {
+  background-image: url('../img/logo/nanjing.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .nanjing {
+   background-image: url('../img/logo/nanjing.png');
+ }  
+}
+
+section#great-users .guojiadianwang {
+  background-image: url('../img/logo/guojiadianwang.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .guojiadianwang {
+   background-image: url('../img/logo/guojiadianwang.png');
+ }  
+}
+
+section#great-users .tengxun {
+  background-image: url('../img/logo/tengxun.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .tengxun {
+   background-image: url('../img/logo/tengxun.png');
+ }  
+}
+
+section#great-users .baidu {
+  background-image: url('../img/logo/baidu.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .baidu {
+   background-image: url('../img/logo/baidu.png');
+ }  
+}
+
+section#great-users .baojie {
+  background-image: url('../img/logo/baojie.png');
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  section#great-users .baojie {
+   background-image: url('../img/logo/baojie.png');
+ }  
+}
